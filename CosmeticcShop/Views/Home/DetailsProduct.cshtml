@@ -1,0 +1,17 @@
+﻿@model CosmeticcShop.Models.Product
+@{
+    ViewBag.Title = Model.Names;
+}
+<h2>Продукт @Model.Names</h2>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Идентификатор</dt>
+        <dd>@Model.ProductId</dd>
+
+        <dt>Название</dt>
+        <dd>@Model.Names</dd>
+
+        <dt>Цена</dt>
+        <dd>@Model.Price</dd>
+    </dl>
+</div>

@@ -1,0 +1,16 @@
+﻿@model IEnumerable<CosmeticcShop.Models.Product>
+@{
+    ViewBag.Title = "Все продукты";
+}
+<a asp-action="Create" asp-controller="Home">Добавить продукт</a>
+<table class="table">
+        @foreach (var item in Model)
+        {
+            <tr><td>@item.Names</td>
+                <td>
+                <a asp-action="DetailsProduct" asp-controller="Home" asp-route-id="@item.ProductId">Подробнее</a> |
+                <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.ProductId">Изменить</a> |
+                <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.ProductId">Удалить</a>
+                </td></tr>
+        }
+</table>
